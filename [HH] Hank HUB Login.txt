@@ -1,0 +1,605 @@
+--[[
+Hank HUB Login
+
+Made by Hank#4242
+
+DUDE IF YOU SEEING THIS THAT MEAN YOU CRACKED MY SCRIPT BRUH
+]]
+
+-- Instances:
+
+local HankHubLogin = Instance.new("ScreenGui")
+local MainBackground = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local MainBackground_Shadow = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local TabBar_TitleBackground = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local TabBar_Title = Instance.new("TextLabel")
+local TabBar_Title2 = Instance.new("TextLabel")
+local UIGradient_2 = Instance.new("UIGradient")
+local Title_Login = Instance.new("TextLabel")
+local TextBox_LoginCode = Instance.new("TextBox")
+local UICorner_4 = Instance.new("UICorner")
+local visibility = Instance.new("ImageButton")
+local Btn_GetKey = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local Btn_Verify = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local Text_Credits = Instance.new("TextLabel")
+local visibility_off = Instance.new("ImageButton")
+local Text_Intro = Instance.new("TextLabel")
+local IntroBackground = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local Title_Intro = Instance.new("TextLabel")
+
+--Properties:
+
+HankHubLogin.Name = "HankHubLogin"
+HankHubLogin.Parent = game:GetService("CoreGui")
+
+MainBackground.Name = "MainBackground"
+MainBackground.Parent = HankHubLogin
+MainBackground.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainBackground.Position = UDim2.new(0.378531069, 0, 0.319224, 0)
+MainBackground.Size = UDim2.new(0, 300, 0, 184)
+MainBackground.Visible = true
+
+UICorner.CornerRadius = UDim.new(0, 5)
+UICorner.Parent = MainBackground
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(25, 25, 25)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(56, 56, 56))}
+UIGradient.Parent = MainBackground
+
+MainBackground_Shadow.Name = "MainBackground_Shadow"
+MainBackground_Shadow.Parent = MainBackground
+MainBackground_Shadow.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+MainBackground_Shadow.BackgroundTransparency = 0.500
+MainBackground_Shadow.BorderColor3 = Color3.fromRGB(27, 42, 53)
+MainBackground_Shadow.Position = UDim2.new(-0.0233333334, 0, -0.0508910455, 0)
+MainBackground_Shadow.Size = UDim2.new(0, 315, 0, 202)
+MainBackground_Shadow.ZIndex = 0
+
+UICorner_2.CornerRadius = UDim.new(0, 5)
+UICorner_2.Parent = MainBackground_Shadow
+
+TabBar_TitleBackground.Name = "TabBar_TitleBackground"
+TabBar_TitleBackground.Parent = MainBackground
+TabBar_TitleBackground.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabBar_TitleBackground.Position = UDim2.new(0.0382165611, 0, 0.0212014131, 0)
+TabBar_TitleBackground.Size = UDim2.new(0, 145, 0, 30)
+
+UICorner_3.CornerRadius = UDim.new(0, 5)
+UICorner_3.Parent = TabBar_TitleBackground
+
+TabBar_Title.Name = "TabBar_Title"
+TabBar_Title.Parent = TabBar_TitleBackground
+TabBar_Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabBar_Title.BackgroundTransparency = 1.000
+TabBar_Title.Position = UDim2.new(-0.0413793102, 0, -0.0121317543, 0)
+TabBar_Title.Size = UDim2.new(0, 79, 0, 30)
+TabBar_Title.ZIndex = 2
+TabBar_Title.Font = Enum.Font.SourceSansBold
+TabBar_Title.Text = "Hank"
+TabBar_Title.TextColor3 = Color3.fromRGB(56, 56, 56)
+TabBar_Title.TextSize = 25.000
+
+TabBar_Title2.Name = "TabBar_Title2"
+TabBar_Title2.Parent = TabBar_TitleBackground
+TabBar_Title2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabBar_Title2.BackgroundTransparency = 1.000
+TabBar_Title2.Position = UDim2.new(0.124137931, 0, -0.0121317543, 0)
+TabBar_Title2.Size = UDim2.new(0, 127, 0, 30)
+TabBar_Title2.ZIndex = 2
+TabBar_Title2.Font = Enum.Font.SourceSansBold
+TabBar_Title2.Text = "HUB"
+TabBar_Title2.TextColor3 = Color3.fromRGB(208, 124, 27)
+TabBar_Title2.TextSize = 25.000
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(25, 25, 25)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(56, 56, 56))}
+UIGradient_2.Parent = TabBar_TitleBackground
+
+Title_Login.Name = "Title_Login"
+Title_Login.Parent = MainBackground
+Title_Login.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_Login.BackgroundTransparency = 1.000
+Title_Login.Position = UDim2.new(0.166666672, 0, 0.239130437, 0)
+Title_Login.Size = UDim2.new(0, 200, 0, 26)
+Title_Login.Font = Enum.Font.SourceSansSemibold
+Title_Login.Text = "LOGIN"
+Title_Login.TextColor3 = Color3.fromRGB(208, 124, 27)
+Title_Login.TextSize = 30.000
+
+TextBox_LoginCode.Name = "TextBox_LoginCode"
+TextBox_LoginCode.Parent = MainBackground
+TextBox_LoginCode.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextBox_LoginCode.Position = UDim2.new(0.0382165536, 0, 0.440217406, 0)
+TextBox_LoginCode.Size = UDim2.new(0, 238, 0, 22)
+TextBox_LoginCode.Font = Enum.Font.SourceSansLight
+TextBox_LoginCode.PlaceholderColor3 = Color3.fromRGB(208, 124, 27)
+TextBox_LoginCode.PlaceholderText = "Insert the key here"
+TextBox_LoginCode.Text = ""
+TextBox_LoginCode.TextColor3 = Color3.fromRGB(208, 124, 27)
+TextBox_LoginCode.TextSize = 14.000
+TextBox_LoginCode.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0, 5)
+UICorner_4.Parent = TextBox_LoginCode
+
+visibility.Name = "visibility"
+visibility.Parent = MainBackground
+visibility.BackgroundTransparency = 1.000
+visibility.LayoutOrder = 4
+visibility.Position = UDim2.new(0.870000005, 0, 0.429347813, 0)
+visibility.Size = UDim2.new(0, 25, 0, 25)
+visibility.Image = "rbxassetid://3926307971"
+visibility.ImageRectOffset = Vector2.new(84, 44)
+visibility.ImageRectSize = Vector2.new(36, 36)
+
+Btn_GetKey.Name = "Btn_GetKey"
+Btn_GetKey.Parent = MainBackground
+Btn_GetKey.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Btn_GetKey.Position = UDim2.new(0.0366666652, 0, 0.603260875, 0)
+Btn_GetKey.Size = UDim2.new(0, 133, 0, 21)
+Btn_GetKey.Font = Enum.Font.SourceSansLight
+Btn_GetKey.Text = "GET KEY"
+Btn_GetKey.TextColor3 = Color3.fromRGB(208, 124, 27)
+Btn_GetKey.TextSize = 14.000
+
+UICorner_5.CornerRadius = UDim.new(0, 5)
+UICorner_5.Parent = Btn_GetKey
+
+Btn_Verify.Name = "Btn_Verify"
+Btn_Verify.Parent = MainBackground
+Btn_Verify.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Btn_Verify.Position = UDim2.new(0.50999999, 0, 0.603260875, 0)
+Btn_Verify.Size = UDim2.new(0, 133, 0, 21)
+Btn_Verify.Font = Enum.Font.SourceSansLight
+Btn_Verify.Text = "VERIFY"
+Btn_Verify.TextColor3 = Color3.fromRGB(208, 124, 27)
+Btn_Verify.TextSize = 14.000
+
+UICorner_6.CornerRadius = UDim.new(0, 5)
+UICorner_6.Parent = Btn_Verify
+
+Text_Credits.Name = "Text_Credits"
+Text_Credits.Parent = MainBackground
+Text_Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text_Credits.BackgroundTransparency = 1.000
+Text_Credits.Position = UDim2.new(0.0182165522, 0, 0.858695626, 0)
+Text_Credits.Size = UDim2.new(0, 151, 0, 24)
+Text_Credits.Font = Enum.Font.SourceSansLight
+Text_Credits.RichText = true
+Text_Credits.Text = "Hank <b>HUB</b> made by Hank#4242"
+Text_Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text_Credits.TextSize = 14.000
+
+visibility_off.Name = "visibility_off"
+visibility_off.Parent = MainBackground
+visibility_off.BackgroundTransparency = 1.000
+visibility_off.LayoutOrder = 14
+visibility_off.Position = UDim2.new(0.870000005, 0, 0.429347813, 0)
+visibility_off.Size = UDim2.new(0, 25, 0, 25)
+visibility_off.Visible = false
+visibility_off.Image = "rbxassetid://3926307971"
+visibility_off.ImageRectOffset = Vector2.new(564, 44)
+visibility_off.ImageRectSize = Vector2.new(36, 36)
+
+Text_Intro.Name = "Text_Intro"
+Text_Intro.Parent = HankHubLogin
+Text_Intro.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text_Intro.BackgroundTransparency = 1.000
+Text_Intro.Position = UDim2.new(0.575999975, 0, -1, 0)
+Text_Intro.Size = UDim2.new(0, 101, 0, 62)
+Text_Intro.Visible = false
+Text_Intro.ZIndex = 0
+Text_Intro.Font = Enum.Font.SourceSansSemibold
+Text_Intro.Text = "Hank HUB"
+Text_Intro.TextColor3 = Color3.fromRGB(208, 124, 27)
+Text_Intro.TextScaled = true
+Text_Intro.TextSize = 14.000
+Text_Intro.TextWrapped = true
+
+IntroBackground.Name = "IntroBackground"
+IntroBackground.Parent = Text_Intro
+IntroBackground.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+IntroBackground.Position = UDim2.new(-0.007081002, 0, -0.314871728, 0)
+IntroBackground.Size = UDim2.new(0, 100, 0, 100)
+
+UICorner_7.CornerRadius = UDim.new(0, 5)
+UICorner_7.Parent = IntroBackground
+
+Title_Intro.Name = "Title_Intro"
+Title_Intro.Parent = IntroBackground
+Title_Intro.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_Intro.BackgroundTransparency = 1.000
+Title_Intro.Position = UDim2.new(0.109999999, 0, 0.129999995, 0)
+Title_Intro.Size = UDim2.new(0, 80, 0, 76)
+Title_Intro.ZIndex = 2
+Title_Intro.Font = Enum.Font.SourceSansBold
+Title_Intro.Text = "H"
+Title_Intro.TextColor3 = Color3.fromRGB(208, 124, 27)
+Title_Intro.TextScaled = true
+Title_Intro.TextSize = 14.000
+Title_Intro.TextWrapped = true
+
+-- Scripts:
+
+local function YMZRRXO_fake_script() -- HankHubLogin.Dragify 
+	local script = Instance.new('LocalScript', HankHubLogin)
+
+	local UIS = game:GetService("UserInputService")
+	local Frame = script.Parent.MainBackground
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(Frame)
+end
+coroutine.wrap(YMZRRXO_fake_script)()
+
+local function notify(name,text)
+    local tweenservice = game:GetService("TweenService")
+
+    local NotifyFirstPosition = UDim2.new(-0.3, 0,0.885, 0)
+    local NotifyLastPosition = UDim2.new(0.008, 0,0.885, 0)
+
+    local NotificationGUI = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local UIGradient = Instance.new("UIGradient")
+    local Top = Instance.new("Frame")
+    local UICorner = Instance.new("UICorner")
+    local UICorner_2 = Instance.new("UICorner")
+    local Title = Instance.new("TextLabel")
+    local Text = Instance.new("TextLabel")
+    local Button = Instance.new("TextButton")
+
+    NotificationGUI.Name = "NotificationGUI"
+    NotificationGUI.Parent = game:GetService("CoreGui")
+
+    Background.Name = "Background"
+    Background.Parent = NotificationGUI
+    Background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Background.Position = UDim2.new(-0.300000012, 0, 0.88499999, 0)
+    Background.Size = UDim2.new(0, 315, 0, 57)
+    Background.Visible = false
+    Background.ZIndex = 0
+
+    UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(25, 25, 25)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(56, 56, 56))}
+    UIGradient.Parent = Background
+
+    Top.Name = "Top"
+    Top.Parent = Background
+    Top.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    Top.Size = UDim2.new(0, 315, 0, 21)
+
+    UICorner.CornerRadius = UDim.new(0, 5)
+    UICorner.Parent = Top
+
+    UICorner_2.CornerRadius = UDim.new(0, 5)
+    UICorner_2.Parent = Background
+
+    Title.Name = "Title"
+    Title.Parent = Background
+    Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Title.BackgroundTransparency = 1.000
+    Title.Size = UDim2.new(0, 315, 0, 21)
+    Title.ZIndex = 2
+    Title.Font = Enum.Font.SourceSansBold
+    Title.Text = "Notify"
+    Title.TextColor3 = Color3.fromRGB(208, 124, 27)
+    Title.TextSize = 20.000
+
+    Text.Name = "Text"
+    Text.Parent = Background
+    Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Text.BackgroundTransparency = 1.000
+    Text.Position = UDim2.new(0, 0, 0.368421048, 0)
+    Text.Size = UDim2.new(0, 315, 0, 36)
+    Text.ZIndex = 2
+    Text.Font = Enum.Font.SourceSansSemibold
+    Text.Text = "Hi"
+    Text.TextColor3 = Color3.fromRGB(208, 124, 27)
+    Text.TextSize = 14.000
+    Text.TextWrapped = true
+
+    Button.Name = "Button"
+    Button.Parent = Background
+    Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Button.BackgroundTransparency = 1.000
+    Button.Position = UDim2.new(0.933333337, 0, 0, 0)
+    Button.Size = UDim2.new(0, 21, 0, 21)
+    Button.ZIndex = 2
+    Button.Font = Enum.Font.SourceSansBold
+    Button.Text = "X"
+    Button.TextColor3 = Color3.fromRGB(208, 124, 27)
+    Button.TextSize = 20.000
+
+    Button.MouseButton1Click:Connect(function()
+        tweenservice:Create(Background,TweenInfo.new(0.4, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = NotifyFirstPosition}):Play()
+        wait(2)
+        Background.Visible = false
+    end)
+    spawn(function()
+        Title.Text = name
+        Text.Text = text
+        Background.Visible = true
+        tweenservice:Create(Background,TweenInfo.new(0.4, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = NotifyLastPosition}):Play()
+        wait(5)
+        tweenservice:Create(Background,TweenInfo.new(0.4, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = NotifyFirstPosition}):Play()
+        wait(2)
+        Background.Visible = false
+    end)
+end
+
+local function Bnotify(name,text,button1,button2,funcbut1,funcbut2)
+    local tweenservice = game:GetService("TweenService")
+    
+    local NotifyFirstPosition = UDim2.new(-0.3, 0,0.82, 0)
+    local NotifyLastPosition = UDim2.new(0.008, 0,0.82, 0)
+    
+    local NotifyFirstColor = Color3.fromRGB(25, 25, 25)
+    local NotifyLastColor = Color3.fromRGB(208, 124, 27)
+    
+    local BNotificationGUI = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local UIGradient = Instance.new("UIGradient")
+    local Top = Instance.new("Frame")
+    local UICorner = Instance.new("UICorner")
+    local UICorner_2 = Instance.new("UICorner")
+    local Title = Instance.new("TextLabel")
+    local Text = Instance.new("TextLabel")
+    local Exit = Instance.new("TextButton")
+    local Button1 = Instance.new("TextButton")
+    local UICorner_3 = Instance.new("UICorner")
+    local Button2 = Instance.new("TextButton")
+    local UICorner_4 = Instance.new("UICorner")
+
+    BNotificationGUI.Name = "BNotificationGUI"
+    BNotificationGUI.Parent = game:GetService("CoreGui")
+
+    Background.Name = "Background"
+    Background.Parent = BNotificationGUI
+    Background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Background.Position = UDim2.new(0.00799999665, 0, 0.817980587, 0)
+    Background.Size = UDim2.new(0, 315, 0, 95)
+    Background.ZIndex = 0
+
+    UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(25, 25, 25)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(56, 56, 56))}
+    UIGradient.Parent = Background
+
+    Top.Name = "Top"
+    Top.Parent = Background
+    Top.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    Top.Size = UDim2.new(0, 315, 0, 21)
+
+    UICorner.CornerRadius = UDim.new(0, 5)
+    UICorner.Parent = Top
+
+    UICorner_2.CornerRadius = UDim.new(0, 5)
+    UICorner_2.Parent = Background
+
+    Title.Name = "Title"
+    Title.Parent = Background
+    Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Title.BackgroundTransparency = 1.000
+    Title.Size = UDim2.new(0, 315, 0, 21)
+    Title.ZIndex = 2
+    Title.Font = Enum.Font.SourceSansBold
+    Title.Text = "Notify"
+    Title.TextColor3 = Color3.fromRGB(208, 124, 27)
+    Title.TextSize = 20.000
+
+    Text.Name = "Text"
+    Text.Parent = Background
+    Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Text.BackgroundTransparency = 1.000
+    Text.Position = UDim2.new(0, 0, 0.216494843, 0)
+    Text.Size = UDim2.new(0, 315, 0, 42)
+    Text.ZIndex = 2
+    Text.Font = Enum.Font.SourceSansSemibold
+    Text.Text = "Hi"
+    Text.TextColor3 = Color3.fromRGB(208, 124, 27)
+    Text.TextSize = 14.000
+    Text.TextWrapped = true
+
+    Exit.Name = "Exit"
+    Exit.Parent = Background
+    Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Exit.BackgroundTransparency = 1.000
+    Exit.Position = UDim2.new(0.933333337, 0, 0, 0)
+    Exit.Size = UDim2.new(0, 21, 0, 21)
+    Exit.ZIndex = 2
+    Exit.Font = Enum.Font.SourceSansBold
+    Exit.Text = "X"
+    Exit.TextColor3 = Color3.fromRGB(208, 124, 27)
+    Exit.TextSize = 20.000
+
+    Button1.Name = "Button1"
+    Button1.Parent = Background
+    Button1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    Button1.Position = UDim2.new(0.244444445, 0, 0.721758068, 0)
+    Button1.Size = UDim2.new(0, 70, 0, 20)
+    Button1.ZIndex = 2
+    Button1.Font = Enum.Font.SourceSansSemibold
+    Button1.Text = "Ok"
+    Button1.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Button1.TextSize = 14.000
+    Button1.TextWrapped = true
+
+    UICorner_3.CornerRadius = UDim.new(0, 5)
+    UICorner_3.Parent = Button1
+
+    Button2.Name = "Button2"
+    Button2.Parent = Background
+    Button2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    Button2.Position = UDim2.new(0.517460346, 0, 0.721758068, 0)
+    Button2.Size = UDim2.new(0, 70, 0, 20)
+    Button2.ZIndex = 2
+    Button2.Font = Enum.Font.SourceSansSemibold
+    Button2.Text = "Cancel"
+    Button2.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Button2.TextSize = 14.000
+    Button2.TextWrapped = true
+
+    UICorner_4.CornerRadius = UDim.new(0, 5)
+    UICorner_4.Parent = Button2
+    
+    Exit.MouseButton1Click:Connect(function()
+        tweenservice:Create(Background,TweenInfo.new(0.4, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = NotifyFirstPosition}):Play()
+        wait(2)
+        Background.Visible = false
+    end)
+    
+    Button1.MouseButton1Click:Connect(funcbut1)
+    
+    Button2.MouseButton1Click:Connect(funcbut2)
+    
+    spawn(function()
+        Title.Text = name
+        Text.Text = text
+        Button1.Text = button1
+        Button2.Text = button2
+        Background.Visible = true
+        tweenservice:Create(Background,TweenInfo.new(0.4, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = NotifyLastPosition}):Play()
+        wait(5)
+        tweenservice:Create(Background,TweenInfo.new(0.4, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = NotifyFirstPosition}):Play()
+        wait(2)
+        Background.Visible = false
+    end)
+end
+
+local function CopyInvite()
+    local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
+    
+    clipBoard("https://discord.io/hankhub")
+end
+
+local function False()
+	tweenservice:Create(Background,TweenInfo.new(0.4, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = NotifyFirstPosition}):Play()
+	wait(2)
+	Background.Visible = false
+end
+
+local function callback(text)
+
+    local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
+
+    if text == "Copy to Clipboard" then
+
+        clipBoard("https://discord.io/hankhub")
+
+    end
+end
+
+local bindableFunction = Instance.new("BindableFunction")
+bindableFunction.OnInvoke = callback
+
+Btn_GetKey.MouseButton1Click:Connect(function()
+	
+	Bnotify("Notification","Copy the link invite by click the button","Copy","Cancel",CopyInvite,False)
+
+--[[
+    game.StarterGui:SetCore("SendNotification", 
+        {
+
+            Title = "Hank HUB";
+            Text = "Copy the link invite by click the button";
+
+            Icon = "rbxassetid://6850480250";
+
+            Duration = 10;
+
+            Callback = bindableFunction;
+
+            Button1 = "Copy to Clipboard";
+
+        }
+    )
+]]
+end)
+
+visibility.MouseButton1Click:Connect(function()
+    if TextBox_LoginCode.BackgroundColor3 == Color3.fromRGB(25, 25 ,25) then
+        TextBox_LoginCode.BackgroundColor3 = Color3.fromRGB(208, 124, 27)
+        visibility_off.Visible = true
+        visibility.Visible = false
+    end
+end)
+
+visibility_off.MouseButton1Click:Connect(function()
+    if TextBox_LoginCode.BackgroundColor3 == Color3.fromRGB(208, 124, 27) then
+        TextBox_LoginCode.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+        visibility.Visible = true
+        visibility_off.Visible = false
+    end
+end)
+
+Btn_Verify.MouseButton1Click:Connect(function()
+    if TextBox_LoginCode.Text == "PleaseBoostHankHubServer:shy:" then
+        Btn_Verify.Text = "Verifying.."
+        wait(0.5)
+        Btn_Verify.Text = "Correct!"
+	wait(2)
+	HankHubLogin:Destroy()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/HankRBXHelper/Hank-HUB/main/%5BHH%5D%20Hank%20HUB%20Intro.lua", true))()
+	notify("Notification","Welcome to Hank HUB!")
+    else
+        Btn_Verify.Text = "Verifying.."
+        wait(0.5)
+        Btn_Verify.Text = "Incorrect!"
+		notify("Notification","Join our discord server to get new key!")
+		--[[
+        game.StarterGui:SetCore("SendNotification", 
+            {
+
+                Title = "Hank HUB";
+                Text = "Join our Discord server to get new key!";
+
+                Icon = "rbxassetid://6850480250";
+
+                Duration = 10;
+
+                Callback = bindableFunction;
+
+                Button1 = "Copy to Clipboard";
+
+            }
+        )
+        wait(0.5)
+        Btn_Verify.Text = "Verify"
+		]]
+    end
+end)
