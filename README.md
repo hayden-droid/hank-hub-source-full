@@ -1,2 +1,2 @@
 # hank-hub-source-full
-Skidded, ip logging hub source code
+Skidded hub source code
